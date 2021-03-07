@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv='X-UA-Compatible' content='ie=edge'>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./assets/style.css">
+    <title> Weather Dashboard</title>
+</head>
+
+<body>
+    <h1>Weather Dashboard</h1>
+  <!-- Overall page contain -->
+  <div class='container'>
+    <div class='row'>
+
+      <div class='col-md-3'>
+
+        <div class='search'>
+          
+          <div class='card-body'>
+            <label>Search For a City:</label>            
+            <div class="mb-3">
+              <!-- Input box with "Minneapolis" placeholder -->
+              <input id="cityEntered" type="text" class="form-control" placeholder="Minneapolis">
+                <div class="input-group-append">
+                  <!-- search button using primary blue color -->
+                  <button id='getEnteredCityWeather' class="btn btn-primary" type="submit">
+                    <i id='getWeatherIcon' class="fas fa-search" aria-hidden="true"></i>
+                  </button>
+                </div>
+              </div>
+              <!-- Historyical Cities Formated Dynamically in Javascript -->
+            <div id='past-searches'></div>
+          </div>
+        </div>
+      </div>
+      
+      <div class='col-md-9 '>
+        <div class='row'>
+          <div class='card'>
+            <div class='card-body'>
+              <!-- City name loaded dynamically in javascript -->
+              <h5 class='card-title' id='cityName'>City</h5>
+
+            </div>
+          </div>
+      </div>
+      <!-- Five day history cards -->
+      <div class='row'>
+          <!-- header for 5 day forecast Container -->
+          <h5 class='card-title' id="fiveDayHeader">5-Day Forcast</h5>
+      </div>
+      <!-- 5 day forecast loaded dynamically in Javascript -->
+      <div class='row' id='forecast'></div>
+    </div>
+  </div>
+  <script src='./assets/script.js'></script>
+</body>
+</html>
